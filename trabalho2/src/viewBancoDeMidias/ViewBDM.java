@@ -7,6 +7,8 @@ package viewBancoDeMidias;
 
 import bancoDeMidias.BancoDeMidias;
 import bancoDeMidias.Midia;
+import java.awt.Component;
+import javax.swing.JOptionPane;
 import sistema.SistemaFilme;
 import sistema.SistemaGeral;
 
@@ -33,17 +35,27 @@ public class ViewBDM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToggleButton1 = new javax.swing.JToggleButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jToggleButton1.setText("jToggleButton1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(123, 123, 123)
+                .addComponent(jToggleButton1)
+                .addContainerGap(172, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(117, 117, 117)
+                .addComponent(jToggleButton1)
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
         pack();
@@ -52,6 +64,7 @@ public class ViewBDM extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -76,6 +89,16 @@ public class ViewBDM extends javax.swing.JFrame {
         }
         //</editor-fold>
         /* Create and display the form */
+        SistemaGeral sistema = new SistemaGeral();
+        String tipo = null;
+        tipo = JOptionPane.showInputDialog("Escolha o tipo de midia" + "\n 1 - Filme \n 2 - AudioLivro \n 3 - Podcast");
+        sistema.escolherTipoDeMidia(tipo);
+        Component parentComponent = null;
+        JOptionPane.showMessageDialog(parentComponent, "Você escolheu" + sistema.getTipo());
+        SistemaGeral sistemaAtual = sistema.getSistemaAtual();
+        String opc = JOptionPane.showInputDialog("O que deseja fazer \n Cadastrar n/ Consultar");
+        
+        //sistema.getSistemaAtual().cadastrar(midia);
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ViewBDM().setVisible(true);
@@ -84,5 +107,6 @@ public class ViewBDM extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

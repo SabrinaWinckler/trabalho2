@@ -1,6 +1,0 @@
-out 30, 2017 9:58:37 PM classificador.Classificador main
-INFORMAÇÕES: Declarando o vetor!
-out 30, 2017 9:58:37 PM classificador.Classificador main
-INFORMAÇÕES: PREENCHENDO O VETOR!
-out 30, 2017 9:58:49 PM classificador.Classificador main
-ADVERTÊNCIA: Deveria haver 10 na variáveis no vetor numeros e há 9

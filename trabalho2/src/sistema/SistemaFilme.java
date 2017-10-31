@@ -8,6 +8,7 @@ package sistema;
 import bancoDeMidias.Midia;
 import gerenciadores.GerenciadorDoSistema;
 import java.util.List;
+import javax.swing.JOptionPane;
 import midias.Filme;
 
 /**
@@ -19,6 +20,17 @@ public class SistemaFilme extends SistemaGeral implements GerenciadorDoSistema{
     Filme filme;
     public SistemaFilme(){
         super();
+    }
+    public static void escolherAcao(String acao){
+        if(acao.equalsIgnoreCase("cadastrar")){
+            String genero = JOptionPane.showInputDialog("Qual o genero do filme?");
+            String diretor = JOptionPane.showInputDialog("Qual o diretor do filme?");
+            String ator = JOptionPane.showInputDialog("Qual o ator Principal do filme?");
+            String duracao = JOptionPane.showInputDialog("Qual o tempo de duracao do filme?");
+            int tempo ;
+           
+            //this.cadastrar();
+        }
     }
     @Override
     public Midia cadastrar(Midia midia) {

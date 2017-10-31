@@ -11,20 +11,25 @@ import gerenciadores.GerenciadorDoSistema;
 import java.util.List;
 import midias.Filme;
 
+
 /**
  *
  * @author SABRINA
  */
 //Classe que gerencia o conjunto de Listas
 public class SistemaGeral implements GerenciadorDoSistema{
-    BancoDeMidias colecaoDeFilmes;
-    BancoDeMidias colecaoDeAudioLivros;
-    BancoDeMidias colecaoDePodcasts;
-
+    private BancoDeMidias colecaoDeFilmes;
+    private BancoDeMidias colecaoDeAudioLivros;
+    private BancoDeMidias colecaoDePodcasts;
+    private String tipo;
+    private SistemaGeral sistemaAtual;
+   
     public SistemaGeral() {
         this.colecaoDeFilmes = new BancoDeMidias();
         this.colecaoDeAudioLivros = new BancoDeMidias();
         this.colecaoDePodcasts = new BancoDeMidias();
+        this.tipo = null;
+        this.sistemaAtual = null;
     }
     public void setColecaoDeFilmes(BancoDeMidias colecaoDeFilmes) {
         this.colecaoDeFilmes = colecaoDeFilmes;
@@ -57,7 +62,9 @@ public class SistemaGeral implements GerenciadorDoSistema{
     @Override
     public Midia cadastrar(Midia midia) {
                 if(midia instanceof Filme){
-                    this.colecaoDeFilmes.cadastrar(midia);
+                 String tipo = "Filme";
+                 this.sistemaAtual = escolherTipoDeMidia(tipo);
+                 this.colecaoDeFilmes.getMidias().add(midia);
                 }
             return midia;
     }
@@ -85,5 +92,21 @@ public class SistemaGeral implements GerenciadorDoSistema{
     @Override
     public void ordenar(List<Midia> midias) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    public SistemaGeral escolherTipoDeMidia(String tipo){
+        this.tipo = tipo;
+        if(tipo.equalsIgnoreCase("Filme")){
+           this.sistemaAtual = new SistemaFilme();
+         }else if(tipo.equalsIgnoreCase("AudioLivro")){
+        
+        }else if(tipo.equalsIgnoreCase("Podcast")){
+        }
+        return this.sistemaAtual;
+    }
+    public String getTipo(){
+        return this.tipo;
+    }
+    public SistemaGeral getSistemaAtual(){
+        return this.sistemaAtual;
     }
 }

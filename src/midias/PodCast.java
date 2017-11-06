@@ -17,13 +17,14 @@ public class PodCast extends Midia {
 
     private String idioma;
     private ArrayList<PodCast> autores;
+    private String autor;
 
-    public PodCast(String caminho, String titulo, String descricao, int ano, String idioma) {
+    public PodCast(String caminho, String titulo, String descricao, int ano, String idioma, String autor) {
         super(caminho, titulo, descricao, ano);
         this.idioma = idioma;
         this.autores = autores;
+        this.autor = autor;
     }
-
     /**
      * @return the idioma
      */

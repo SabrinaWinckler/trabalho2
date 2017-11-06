@@ -35,6 +35,11 @@ public class Opcoes extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         botaoCadastrar.setText("Cadastrar");
+        botaoCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoCadastrarActionPerformed(evt);
+            }
+        });
 
         botaoBuscar.setText("Buscar");
 
@@ -71,6 +76,18 @@ public class Opcoes extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botaoCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCadastrarActionPerformed
+        new CadastrarPodCast().setVisible(true);
+        /*
+        int opcao = 0;
+         switch (opcao) {
+            case 1:
+                new cadastrarPodCast().setVisible(true);
+            case 2:
+        }
+        */ 
+    }//GEN-LAST:event_botaoCadastrarActionPerformed
 
     /**
      * @param args the command line arguments

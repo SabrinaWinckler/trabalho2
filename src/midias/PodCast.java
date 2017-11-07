@@ -5,7 +5,7 @@
  */
 package midias;
 
-import bancoDeMidias.Midia;
+import gerenciadores.GerenciadorBancoDeMidias;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,18 +13,17 @@ import java.util.List;
  *
  * @author vagne
  */
-public class PodCast extends Midia {
+public class PodCast extends Midia implements GerenciadorBancoDeMidias {
 
     private String idioma;
-    private ArrayList<PodCast> autores;
-    private String autor;
+    private String autores;
 
-    public PodCast(String caminho, String titulo, String descricao, int ano, String idioma, String autor) {
-        super(caminho, titulo, descricao, ano);
+    public PodCast(String caminho, String titulo, String descricao, int ano, String idioma, int id, String autores) {
+        super(caminho, titulo, descricao, ano, id);
         this.idioma = idioma;
         this.autores = autores;
-        this.autor = autor;
     }
+
     /**
      * @return the idioma
      */
@@ -42,14 +41,40 @@ public class PodCast extends Midia {
     /**
      * @return the autores
      */
-    public ArrayList<PodCast> getAutores() {
+    public String getAutores() {
         return autores;
     }
 
     /**
      * @param autores the autores to set
      */
-    public void setAutores(ArrayList<PodCast> autores) {
+    public void setAutores(String autores) {
         this.autores = autores;
     }
+
+    @Override
+    public boolean cadastrar(Midia midia) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Midia consultar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean excluir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean editar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<Midia> exibir() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

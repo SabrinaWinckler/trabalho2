@@ -5,7 +5,6 @@
  */
 package midias;
 
-import bancoDeMidias.Midia;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,8 +19,8 @@ public class Filme extends Midia{
     private List<String>    atoresPrincipais;
     private int duracao;
         
-    public Filme(String genero, String idioma, String diretor, List<String> atoresPrincipais, int duracao, String caminho, String titulo, String descricao, int ano) {
-        super(caminho, titulo, descricao, ano);
+    public Filme(String genero, String idioma, String diretor, List<String> atoresPrincipais, int duracao, String caminho, String titulo, String descricao, int ano, int id) {
+        super(caminho, titulo, descricao, ano, id);
         this.genero = genero;
         this.idioma = idioma;
         this.diretor = diretor;

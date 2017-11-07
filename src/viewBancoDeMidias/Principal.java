@@ -93,19 +93,19 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botaoFilmeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoFilmeActionPerformed
-        new Opcoes().setVisible(true);
+        // new Opcoes().setVisible(true);
     }//GEN-LAST:event_botaoFilmeActionPerformed
 
     private void botaoEbookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEbookActionPerformed
-        new Opcoes().setVisible(true);
+        // new Opcoes().setVisible(true);
     }//GEN-LAST:event_botaoEbookActionPerformed
 
     private void botaoPodCastActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoPodCastActionPerformed
-        new Opcoes().setVisible(true);
+        new ViewPodcast().setVisible(true);
     }//GEN-LAST:event_botaoPodCastActionPerformed
 
     private void botaoAudioLivroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoAudioLivroActionPerformed
-        new Opcoes().setVisible(true);
+        // new Opcoes().setVisible(true);
     }//GEN-LAST:event_botaoAudioLivroActionPerformed
 
     /**

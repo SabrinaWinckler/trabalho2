@@ -6,10 +6,10 @@
 package viewBancoDeMidias;
 
 import bancoDeMidias.BancoDeMidias;
-import bancoDeMidias.Midia;
+import midias.Midia;
 import java.awt.Component;
 import javax.swing.JOptionPane;
-import sistema.SistemaFilme;
+// import sistema.SistemaFilme;
 import sistema.SistemaGeral;
 
 /**
@@ -64,7 +64,6 @@ public class ViewBDM extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -92,13 +91,13 @@ public class ViewBDM extends javax.swing.JFrame {
         SistemaGeral sistema = new SistemaGeral();
         String tipo = null;
         tipo = JOptionPane.showInputDialog("Escolha o tipo de midia" + "\n 1 - Filme \n 2 - AudioLivro \n 3 - Podcast");
-        sistema.escolherTipoDeMidia(tipo);
+       // sistema.escolherTipoDeMidia(tipo);
         Component parentComponent = null;
         JOptionPane.showMessageDialog(parentComponent, "Você escolheu" + sistema.getTipo());
-        SistemaGeral sistemaAtual = sistema.getSistemaAtual();
+       // SistemaGeral sistemaAtual = sistema.getSistemaAtual();
         String opc = JOptionPane.showInputDialog("O que deseja fazer \n Cadastrar n/ Consultar");
-        
-        //sistema.getSistemaAtual().cadastrar(midia);
+
+       // sistema.getSistemaAtual().cadastrar(midia);
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new ViewBDM().setVisible(true);

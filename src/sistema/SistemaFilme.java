@@ -5,7 +5,7 @@
  */
 package sistema;
 
-import bancoDeMidias.Midia;
+import midias.Midia;
 import gerenciadores.GerenciadorDoSistema;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -35,7 +35,7 @@ public class SistemaFilme extends SistemaGeral implements GerenciadorDoSistema{
     @Override
     public Midia cadastrar(Midia midia) {
         Filme atual = (Filme) midia;
-        this.filme = new Filme(atual.getGenero(), atual.getIdioma(), atual.getDiretor(),atual.getAtoresPrincipais(), atual.getDuracao(), atual.getCaminho(), atual.getTitulo(), atual.getDescricao(), atual.getAno());
+        this.filme = new Filme(atual.getGenero(), atual.getIdioma(), atual.getDiretor(),atual.getAtoresPrincipais(), atual.getDuracao(), atual.getCaminho(), atual.getTitulo(), atual.getDescricao(), atual.getAno(), atual.getId());
         return this.filme;
     }
 

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package bancoDeMidias;
+package midias;
 
 import java.util.Objects;
 
@@ -18,12 +18,12 @@ public abstract class  Midia {
     private int ano;
     private int id;
 
-    public Midia(String caminho, String titulo, String descricao, int ano) {
+    public Midia(String caminho, String titulo, String descricao, int ano, int id) {
         this.caminho = caminho;
         this.titulo = titulo;
         this.descricao = descricao;
         this.ano = ano;
-        this.id = 0;
+        this.id = id;
     }
 
     public void setCaminho(String caminho) {
@@ -68,7 +68,7 @@ public abstract class  Midia {
     
     @Override
     public String toString() {
-        return "Midia{" + "caminho=" + caminho + ", titulo=" + titulo + ", descricao=" + descricao + ", ano=" + ano + ", id=" + id + '}';
+        return "Midia{" + "caminho=" + caminho + ", titulo=" + titulo + ", descricao=" + descricao + ", ano=" + ano + ", id=" + getId() + '}';
     }
      public boolean compareTo(Object obj){
         Midia midia = (Midia) obj;

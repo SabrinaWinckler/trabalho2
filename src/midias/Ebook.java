@@ -6,7 +6,6 @@
 
 package midias;
 
-import bancoDeMidias.Midia;
 import java.util.List;
 
 /**
@@ -20,8 +19,8 @@ public class Ebook extends Midia {
     private String editora;
     private int numeropaginas;
 
-    public Ebook(String genero, List<String> autores, String local, String editora, int numeropaginas, String caminho, String titulo, String descricao, int ano) {
-        super(caminho, titulo, descricao, ano);
+    public Ebook(String genero, List<String> autores, String local, String editora, int numeropaginas, String caminho, String titulo, String descricao, int ano, int id) {
+        super(caminho, titulo, descricao, ano, id);
         this.genero = genero;
         this.autores = autores;
         this.local = local;

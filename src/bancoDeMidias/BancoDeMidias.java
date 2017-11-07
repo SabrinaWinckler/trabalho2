@@ -5,6 +5,7 @@
  */
 package bancoDeMidias;
 
+import midias.Midia;
 import gerenciadores.GerenciadorBancoDeMidias;
 import java.util.ArrayList;
 import java.util.List;

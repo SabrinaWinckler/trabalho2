@@ -37,9 +37,6 @@ public class SistemaGeral implements GerenciadorDoSistema {
 //
     }
 
-    public static void main(String[] args) {
-    }
-
     public void setColecaoDeFilmes(BancoDeMidias colecaoDeFilmes) {
         this.colecaoDeFilmes = colecaoDeFilmes;
     }
@@ -74,7 +71,7 @@ public class SistemaGeral implements GerenciadorDoSistema {
         if (midia instanceof Filme) {
             String tipo = "Filme";
 //            this.sistemaAtual = escolherTipoDeMidia(tipo);
-            this.colecaoDeFilmes.getMidias().add(midia);
+            this.colecaoDeFilmes.cadastrar(midia);
         } else if (midia instanceof PodCast) {
             String tipo = "PodCast";
             System.out.println("Cadastrado!");

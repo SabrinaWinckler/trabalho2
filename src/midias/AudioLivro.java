@@ -5,14 +5,83 @@
  */
 package midias;
 
+import java.util.List;
+
 /**
  *
  * @author vagne
  */
 public class AudioLivro extends Midia {
+    private String genero;
+    private String idioma;
+    private List<String> autores;
+    private String local;
+    private String editora;
+    private int duracao;
     
-    public AudioLivro(String caminho, String titulo, String descricao, int ano, int id) {
+    
+    public AudioLivro(String caminho, String titulo, String descricao, int ano, int id, String genero, String idioma,
+            List<String> autores, String local, String editora, int duracao) {
         super(caminho, titulo, descricao, ano, id);
+        this.genero = genero;
+        this.idioma = idioma;
+        this.autores = autores;
+        this.local = local;
+        this.editora = editora;
+        this.duracao = duracao;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public String getIdioma() {
+        return idioma;
+    }
+
+    public void setIdioma(String idioma) {
+        this.idioma = idioma;
+    }
+
+    public List<String> getAutores() {
+        return autores;
+    }
+
+    public void setAutores(List<String> autores) {
+        this.autores = autores;
+    }
+
+    public String getLocal() {
+        return local;
+    }
+
+    public void setLocal(String local) {
+        this.local = local;
+    }
+
+    public String getEditora() {
+        return editora;
+    }
+
+    public void setEditora(String editora) {
+        this.editora = editora;
+    }
+
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
     }
     
-}
+    public String toString(){
+        return "AudioLivro{" + "genero=" +genero +", idioma=" +idioma +", autores=" +autores +", local=" +local +", editora=" +editora +", duracao=" +duracao;
+                }
+    
+    }
+
